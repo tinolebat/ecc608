@@ -11,4 +11,4 @@ RUN apt-get install -y gcc cmake vim
 RUN CRYPTOAUTHLIB_NOUSB=True pip3 install cryptoauthlib==20220320 cryptography
 
 COPY ./ecc.py /ecc.py
-CMD ["python" "/ecc.py"]
+CMD python ecc.py
