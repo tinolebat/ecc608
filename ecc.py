@@ -1,3 +1,4 @@
+import os
 from cryptoauthlib import *
 from cryptography.hazmat.primitives.asymmetric import ec
 
@@ -17,6 +18,8 @@ def ecc_cfg():
     res = atcab_init(cfg)
     if not ATCA_SUCCESS == res:
         raise EccError("Init ECC608 Error: {:d}".format(res))
+    else:
+        print("Congratulations!Connect ECC608 via I2C succeed")
 
 if __name__ == '__main__':
     ecc_cfg()
